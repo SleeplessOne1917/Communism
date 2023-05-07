@@ -59,7 +59,7 @@ set quotes "History repeats itself, first as tragedy, second as farce.\n- Karl M
 
 function fish_greeting
     # Change your name here if you don't like your Username
-    set name $USERNAME
+    set name $USER
     set d (date '+%A %d-%B, %Y')
 
     set_color red
