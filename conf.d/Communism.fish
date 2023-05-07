@@ -61,7 +61,7 @@ set quotes "History repeats itself, first as tragedy, second as farce.
 function fish_greeting
     # Change your name here if you don't like your Username
     set name $USERNAME
-    set d ('+%A %d-%B, %Y')
+    set d (date '+%A %d-%B, %Y')
 
     set selected_quote (random choice $quotes)
 
