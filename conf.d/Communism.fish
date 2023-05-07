@@ -86,7 +86,7 @@ function fish_greeting
         ~##                                          ##~"
     echo
     # Write to Shell
-    echo -e (random choice $quotes)
+    echo -se (random choice $quotes)
     echo
 
     set_color normal
