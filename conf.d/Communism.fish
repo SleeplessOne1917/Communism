@@ -96,4 +96,4 @@ function greeting
     set_color normal
 end
 
-set -g fish_greeting ($greeting)
+set -g fish_greeting $greeting
