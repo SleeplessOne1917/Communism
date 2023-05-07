@@ -58,7 +58,7 @@ set quotes "History repeats itself, first as tragedy, second as farce.
 - Karl Marx" "On a level plain, simple mounds look like hills; and the insipid flatness of our present bourgeoisie is to be measured by the altitude of its great intellects.  
 - Karl Marx"
 
-function greeting
+function fish_greeting
     # Change your name here if you don't like your Username
     set name $USERNAME
     set d ('+%A %d-%B, %Y')
@@ -95,5 +95,3 @@ function greeting
 
     set_color normal
 end
-
-set -g fish_greeting $greeting
