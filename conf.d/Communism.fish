@@ -1,8 +1,4 @@
-#Change your name here if you don't like your Username
-name=${USERNAME}
-d=`date '+%A %d-%B, %Y'`
-
-quotes=("History repeats itself, first as tragedy, second as farce.  
+set quotes "History repeats itself, first as tragedy, second as farce.  
 - Karl Marx" "Workers of the world unite; you have nothing to lose but your chains.  
 - Karl Marx" "Social progress can be measured by the social position of the female sex.  
 - Karl Marx" "The only antidote to mental suffering is physical pain.  
@@ -60,36 +56,44 @@ quotes=("History repeats itself, first as tragedy, second as farce.
 - Karl Marx" "Greek philosophy seems to have met with something with which a good tragedy is not supposed to meet, namely, a dull ending.  
 - Karl Marx" "It is absolutely impossible to transcend the laws of nature. What can change in historically different circumstances is only the form in which these laws expose themselves.  
 - Karl Marx" "On a level plain, simple mounds look like hills; and the insipid flatness of our present bourgeoisie is to be measured by the altitude of its great intellects.  
-- Karl Marx" )
+- Karl Marx"
 
-# Seed random generator
-RANDOM=$$$(date +%s)
+function greeting
+    # Change your name here if you don't like your Username
+    set name $USERNAME
+    set d ('+%A %d-%B, %Y')
 
-selectedquote=${quotes[ $RANDOM % ${#quotes[@]} ]}
+    set selected_quote (random choice $quotes)
 
-echo
-echo "\e[1;31m                     Hello, $name"
-echo "\e[1;31m  It is $d. And today Communism will win."
-echo "\e[1;31m     
-                  !#########       #
-                !########!          ##!
-              !########!               ###
-          !##########                  ####
-        ######### #####                ######
-          !###!      !####!              ######
-            !           #####            ######!
-                          !####!         #######
-                            #####       #######
-                              !####!   #######!
-                                  ####!########
-              ##                   ##########
-            ,######!          !#############
-          ,#### ########################!####!
-        ,####'     ##################!'    #####
-      ,####'            #######              !####!
-      ####'                                      #####
-      ~##                                          ##~"
-echo
-# Write to Shell
-echo "\e[1;31m$selectedquote"
-echo
+    set_color red
+    echo
+    echo "                     Hello, $name"
+    echo "  It is $d. And today Communism will win."
+    echo "     
+                    !#########       #
+                    !########!          ##!
+                !########!               ###
+            !##########                  ####
+            ######### #####                ######
+            !###!      !####!              ######
+                !           #####            ######!
+                            !####!         #######
+                                #####       #######
+                                !####!   #######!
+                                    ####!########
+                ##                   ##########
+                ,######!          !#############
+            ,#### ########################!####!
+            ,####'     ##################!'    #####
+        ,####'            #######              !####!
+        ####'                                      #####
+        ~##                                          ##~"
+    echo
+    # Write to Shell
+    echo $selected_quote
+    echo
+
+    set_color normal
+end
+
+set -g fish_greeting ($greeting)
