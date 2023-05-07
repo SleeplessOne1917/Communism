@@ -1,20 +1,14 @@
 # Communism
 
-<img width="900" alt="Screenshot of the app in my terminal on Arch" src="https://user-images.githubusercontent.com/9009959/218278604-390b7d68-1bba-425f-880b-4c40455559ce.png">
+<img width="900" alt="Screenshot of the app in my terminal on Arch" src="https://user-images.githubusercontent.com/28871516/236706050-8dc81b3f-b48b-4781-bd8d-72771014f0a1.png">
 
-A chill ZSH startup plugin that adds Marx quotes and some wonderful red imagery to your terminal.
+A chill fish startup plugin that adds Marx quotes and some wonderful red imagery to your terminal. Fork of [Communism by victoria-riley-barnett](https://github.com/victoria-riley-barnett/Communism)
 
 ### Requires 
-- oh-my-zsh
+- [fisher](https://github.com/jorgebucaran/fisher)
 
 ### Installation
 
 ```
-cd ~/{wherever you put your OMZ plugins or scripts}
-git clone --depth-1 https://github.com/victoria-riley-barnett/Communism
-```
-
-Edit your .zshrc Plugins array to include your new plugin:
-```
-plugins=(... Communism)
+fisher install SleeplessOne1917/Communism.fish
 ```
